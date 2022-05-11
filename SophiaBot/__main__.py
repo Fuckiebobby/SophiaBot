@@ -74,11 +74,11 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """Hey there! My name is <b>Sophia.</b>\nI can help manage your groups with useful features, feel free to add me to your groups!"""
+PM_START_TEXT = """Hey there! My name is <b>CUTIE.</b>\nI can help manage your groups with useful features, feel free to add me to your groups!"""
 
 buttons = [
     [
-        InlineKeyboardButton(text=" Commands Help ❓", callback_data="help_back"),
+        InlineKeyboardButton(text=" 🕵️‍♀️𝐇ᴇʟᴘ & 𝐂ᴏᴍᴍᴀɴᴅs🕵️‍♂️", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
@@ -86,19 +86,19 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Sophia News 🙋‍♀️ ", url=f"https://t.me/SophiaUpdates"),
-        InlineKeyboardButton(text="Support Group 💬 ", url=f"https://t.me/SophiaSupport_Official"),
+        InlineKeyboardButton(text="🥵𝐅ᴜ*ᴋᴇʀ🥵", url=f"https://t.me/aboutbobby"),
+        InlineKeyboardButton(text="😈𝐃ᴇᴀʀ 𝐂ᴏᴍʀᴀᴅᴇ😈 💬 ", url=f"https://t.me/tamil_comrades_x"),
     ],
     [
-        InlineKeyboardButton(text="➕ Add me to your Group ➕", url="t.me/SophiaSLBot?startgroup=true"),   
+        InlineKeyboardButton(text="💥𝐀ᴅᴅ 𝐌ᴇ 𝐓ᴏ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ💥", url="t.me/SophiaSLBot?startgroup=true"),   
     ],
 ]
 
 HELP_STRINGS = """
-Hi Boss! I'm <b>Sophia</b>. An anime themed super powerful group management bot with many handy tools. So why are you waiting. Let me to assist you.
+Hi Boss! I'm <b>CUTIE</b>. An anime themed super powerful group management bot with many handy tools. So why are you waiting. Let me to assist you.
 """
 
-DONATE_STRING = """ Join Updates Channel @SophiaUpdates | Support Group @SophiaSupport_Official"""
+DONATE_STRING = """ Join Updates Channel @tamil_comrades_x | Support Group @kadalora_kadalai"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -738,7 +738,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 5299049743 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -786,10 +786,10 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm Online Now! 💫 | Join my Group @SophiaSupport_Official ❤")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm Online Now! 💫 | Join my Group @kadalora_kadalai ❤")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to Support Group, go and check!.| Support Group @SophiaSupport_Official ❤"
+                "Bot isnt able to send message to Support Group, go and check!.| Support Group @tamil_comrades_x ❤"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
